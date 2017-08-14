@@ -65,17 +65,24 @@ def has_phone_number(password):
         return False
 
 
+def not_recommended_password(password):
+    if password in get_black_list_password():
+        return True
+    elif len(password) < 6:
+        return True
+    elif password in get_campaign_names():
+        return True
+    elif has_calendar_date(password):
+        return True
+    elif has_phone_number(password):
+        return True
+    else:
+        return False
+
+
 def get_password_strength(password):
     strength = 1
-    if password in get_black_list_password():
-        return strength
-    if len(password) < 6:
-        return strength
-    if password in get_campaign_names():
-        return strength
-    if has_calendar_date(password):
-        return strength
-    if has_phone_number(password):
+    if not_recommended_password(password):
         return strength
 
     if password_has_digits(password):
