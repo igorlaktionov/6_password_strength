@@ -1,7 +1,24 @@
-# Password Strength Calculator
+# Определитель сложности пароля
 
-[TODO. There will be project description]
+Скрипт для нахождения сложности пароля
 
-# Project Goals
+# Как запустить
 
-The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
+Скрипт требует для своей работы установленного интерпретатора Python версии 3.5
+
+Запуск на Linux:
+
+```#!bash
+
+$ python password_strength.py # Возможно, требует вызова исполнительного элемента python3 вместо простого python
+
+Пример вывода:
+7
+...
+```
+
+Запуск на Windows происходит аналогично.
+
+# Цели проекта
+
+Код создан в учебных целях. В рамках учебного курса по веб-разработке - [DEVMAN.org](https://devman.org)
